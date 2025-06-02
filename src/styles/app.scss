@@ -3,27 +3,17 @@
 
 // colors 
 
-@font-face {
-    font-family: 'ClashGrotesk-Bold';
-    src: url('../fonts/ClashGrotesk-Bold.woff2') format('woff2'),
-       url('../fonts/ClashGrotesk-Bold.woff') format('woff'),
-       url('../fonts/ClashGrotesk-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-display: swap;
-    font-style: normal;
-}
-
 :root {
     --black : #121212 ; 
     --white : #fafafa ; 
     --red : #9b0a0a ;
+    --dash-line-color : rgba(250, 250, 250, 0.50) ; 
     --font : "Bricolage Grotesque", sans-serif ; 
-    --big-title-font : "Clash Grotesk-Bold" ; 
     --h1-title-mob : 3.06rem ;
     --h2-title-mob : 2.56rem ;
     --train-title-mob : 2.13rem ;
     --train-numb-mob : 5.44rem ; 
-    --big-text-mob : 2.13rem;
+    --big-text-mob : 2.125rem;
     --medium-text-mob : 1.44rem;
     --small-text-mob : 1rem; 
     --special-text-mob : 1.75rem ; 
@@ -31,6 +21,7 @@
     --title-lh : 120% ; 
     --text-lh : 140% ; 
     --text-semi-bold : 600 ; 
+    --text-bold : 700 ; 
     --text-extra-bold : 800 ; 
 }
 
@@ -47,3 +38,124 @@
     padding-block-start: 0;
     padding-block-end: 0;
 }
+
+html, body {
+    height: 100%;
+    width: 100vw;
+}
+
+body {
+    background-color: var(--black);
+    position: relative;
+    overflow-x: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.dashed--line {
+    height: 100%;
+    border-left: 2px dashed var(--dash-line-color);
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.dashed--line__left {
+    left: 15%;
+}
+
+.dashed--line__right {
+    right: 15%;
+}
+
+.deco {
+    display: none;
+}
+
+.menu {
+    background-color: var(--white);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 28px;
+}
+
+.menu--links {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font); 
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: var(--big-text-mob);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    transition: all ease 0.4s;
+}
+
+.menu--links__hidden {
+    transform: translateY(-100%);
+}
+
+.menu--links__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 34px;
+}
+
+.menu--links__apply {
+    margin-top: 60px;
+    padding: 11px 28px;
+    background-color: var(--red);
+    color: var(--white);
+    border: 3px solid var(--black);
+}
+
+.menu--title {
+    position: inherit;
+    z-index: 1;
+    font-family: var(--font); 
+    font-weight: var(--text-bold);
+    color: var(--black);
+    text-transform: uppercase;
+    font-size: var(--big-text-mob);
+    text-shadow: 2px 0px 4px rgb(155, 10, 10, 0.50);
+    z-index: 10;
+}
+
+.menu--burger {
+    position: inherit;
+    color: var(--black);
+    z-index: 10;
+    border: none;
+    background-color: transparent;
+}
+
+.menu--line {
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    background-color: var(--black);
+    top: 0;
+    right: 88px;
+}
+
+
+
