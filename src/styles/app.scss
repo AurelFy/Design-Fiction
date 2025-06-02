@@ -1,2 +1,49 @@
 @import 'utils/variables';
 @import 'components/type';
+
+// colors 
+
+@font-face {
+    font-family: 'ClashGrotesk-Bold';
+    src: url('../fonts/ClashGrotesk-Bold.woff2') format('woff2'),
+       url('../fonts/ClashGrotesk-Bold.woff') format('woff'),
+       url('../fonts/ClashGrotesk-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+:root {
+    --black : #121212 ; 
+    --white : #fafafa ; 
+    --red : #9b0a0a ;
+    --font : "Bricolage Grotesque", sans-serif ; 
+    --big-title-font : "Clash Grotesk-Bold" ; 
+    --h1-title-mob : 3.06rem ;
+    --h2-title-mob : 2.56rem ;
+    --train-title-mob : 2.13rem ;
+    --train-numb-mob : 5.44rem ; 
+    --big-text-mob : 2.13rem;
+    --medium-text-mob : 1.44rem;
+    --small-text-mob : 1rem; 
+    --special-text-mob : 1.75rem ; 
+    --footer-text-mob : 1rem ;
+    --title-lh : 120% ; 
+    --text-lh : 140% ; 
+    --text-semi-bold : 600 ; 
+    --text-extra-bold : 800 ; 
+}
+
+* {
+    margin: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+
+    padding: 0;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+    padding-block-start: 0;
+    padding-block-end: 0;
+}
