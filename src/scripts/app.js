@@ -11,7 +11,7 @@ function openMenu(){
   menu.classList.toggle("menu--links__hidden");
   }
 
-/* gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
 gsap.utils.toArray("p").forEach(p => {
   gsap.from(p, {
@@ -25,4 +25,4 @@ gsap.utils.toArray("p").forEach(p => {
     duration: 1,
     ease: "power2.out"
   });
-}); */ 
+});
