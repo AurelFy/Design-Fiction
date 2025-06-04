@@ -193,9 +193,7 @@ a {
     right: 88px;
 }
 
-.header--
- 
- {
+.header--img img {
     margin: 41px 16% 0 16%;
     width: 68%;
 }
@@ -416,6 +414,11 @@ footer a {
     font-size: var(--train-title-mob);
 }
 
+.train--title__left {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
 .train--title__num {
     font-size: var(--train-numb-mob);
 }
@@ -428,6 +431,7 @@ footer a {
 
 .train--txt {
     font-size: var(--medium-text-mob);
+    font-weight: var(--text-semi-bold);
 }
 
 .train--small__txt {
