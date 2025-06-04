@@ -23,9 +23,15 @@
     --big-text-mob : 2.125rem;
     --medium-text-mob : 1.438rem;
     --small-text-mob : 1rem; 
-    --train-text-mob : 1.188rem
+    --train-text-mob : 1.188rem ; 
     --special-text-mob : 1.75rem ; 
     --footer-text-mob : 1rem ;
+
+    --h2-title-tab : 3.5rem ; 
+    --h1-title-tab : 3.5rem ;
+    --medium-text-tab : 1.625rem ; 
+    --small-text__tab : 1.125rem ; 
+    --special-text-tab : 2.375rem ; 
 
     --nav-links-dsk : 1.25rem ; 
     --nav-title-dsk : 7.063rem ; 
@@ -65,6 +71,10 @@ ul {
 a {
     text-decoration: none;
     color: var(--black);
+}
+
+button {
+    cursor: pointer;
 }
 
 .white--bg {
@@ -245,12 +255,12 @@ a {
     width: 100%;
     position: absolute;
     top: -35px;
-    letter-spacing: 5%;
+    letter-spacing: 5px;
     text-align: center;
 }
 
 .thrill--text, 
-.redef--text, 
+.redef--text,
 .launch--text {
     margin: 0 16%;
     font-size: var(--medium-text-mob);
@@ -270,7 +280,7 @@ a {
 }
 
 .info--text, .bof--text {
-    padding: 0 23px 23px 23px;
+    padding: 0 0 23px 23px;
     border-left: 2px solid var(--red);
 }
 
@@ -470,6 +480,150 @@ a {
     }
 
 }
+
+@media (min-width: 768px) {
+
+    .dashed--line__left {
+        left: 118px;
+    }
+    
+    .dashed--line__right {
+        right: 118px;
+    }
+
+    .title--vertical span {
+        display: block;
+        margin-bottom: -40px;
+    }
+
+    .title--vertical span:first-of-type {
+        margin-top: -40px;
+    }
+
+    .thrill, 
+    .redef, 
+    .launch {
+        margin-top: 118px;
+        padding: 118px 0;
+    }
+
+    .thrill--title, 
+    .redef--title, 
+    .launch--title {
+        font-size: var(--h1-title-tab);
+        letter-spacing: 0;
+    }
+
+    .thrill--title {
+        top: 15%;
+        left: 100px;
+        width: auto;
+    }
+
+    .thrill--text {
+        margin: 0 16% 0 32%;
+    }
+
+    .thrill--text, 
+    .redef--text, 
+    .launch--text {
+    font-size: var(--medium-text-tab);
+    }
+
+    .redef--title {
+        letter-spacing: 15px;
+    }
+
+    .redef--text {
+        margin: 0 200px;
+    }
+
+    .launch--title {
+        width: auto;
+        right: 100px;
+        top: 2%;
+    }
+
+    .launch--text {
+        margin: 0 32% 0 16%;
+    }
+
+    .info {
+        padding: 118px;
+
+        .info--text {
+            font-size: var(--small-text__tab);
+        }
+    
+        .info--text__02, .info--deco {
+            margin-bottom: 56px;
+        }
+    
+        .info--deco {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            .info--img {
+                width: 40%;
+                margin: 0 38px 0 0 ;
+            }
+    
+            .info--text__02 {
+                margin: 0;
+            }
+    
+        }
+        
+    }
+
+    .bof {
+
+        padding-top: 0;
+
+        .bof--title {
+            font-size: var(--h2-title-tab);
+            margin: 0 118px;
+        }
+
+        .bof--cards {
+            padding: 0 118px ;
+            margin-top: 81px;
+            gap: 56px;
+
+            .bof--card {
+                width: 270px;
+                padding: 18px 26px;
+                margin: 0;
+
+                .bof--cards__title {
+                    font-size: var(--medium-text-tab);
+                }
+
+            }
+
+        }
+
+        .bof--text {
+            font-size: var(--special-text-tab);
+        }
+
+        .bof--btn {
+            font-size: var(--special-text-tab);
+        }
+
+        
+
+    }
+
+
+    /////// TRAIN 
+    .train--deco {
+        display: flex;
+        flex-direction: row;
+    }
+
+} 
 
 
 @media (min-width: 1024px) {
