@@ -13,10 +13,10 @@ function openMenu(){
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.utils.toArray("p").forEach(p => {
-  gsap.from(p, {
+gsap.utils.toArray(".text--anim").forEach(left => {
+  gsap.from(left, {
     scrollTrigger: {
-      trigger: p,
+      trigger: left,
       start: "top 80%", 
       toggleActions: "restart reset restart reset"
     },
@@ -26,3 +26,37 @@ gsap.utils.toArray("p").forEach(p => {
     ease: "power2.out"
   });
 });
+
+gsap.utils.toArray(".text--anim__right").forEach(right => {
+  gsap.from(right, {
+    scrollTrigger: {
+      trigger: right,
+      start: "top 80%", 
+      toggleActions: "restart reset restart reset"
+    },
+    opacity: 0,
+    x: 30,
+    duration: 1,
+    ease: "power2.out"
+  });
+});
+
+gsap.from("html > *", {
+  opacity: 0,
+  duration: 2,
+  ease: "ease-out"
+});
+
+gsap.utils.toArray(".bof--card").forEach(bot => {
+  gsap.from(bot, {
+    scrollTrigger: {
+      trigger: bot, 
+      start: "top 70%", 
+      toggleActions: "restart reset restart reset"
+    }, 
+    opacity: 0, 
+    y: 30, 
+    duration: 1, 
+    ease: "ease-out"
+  })
+}); 

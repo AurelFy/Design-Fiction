@@ -43,6 +43,9 @@
     --medium-text-dsk : 2.5rem ;
     --small-text-dsk : 1.75rem ; 
     --special-text-dsk : 3.563rem ;
+    --train-title-dsk : 5rem ;
+    --train-numb-dsk : 14.125rem ;
+    --train-txt-dsk : 1.75rem ;
 }
 
 * {
@@ -861,7 +864,8 @@ button {
         z-index: 1;
         overflow-y: hidden;
         display: flex;
-        justify-content: center;
+        justify-content: center; 
+        overflow: hidden;
     }
 
     .thrill::before, 
@@ -895,7 +899,7 @@ button {
     }
 
     .thrill--title {
-        top: 11.5%;
+        top: 15%;
         left: 125px;
     }
 
@@ -954,6 +958,9 @@ button {
 
             .bof--card {
 
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
                 width: auto;
 
                 .bof--title {
@@ -964,6 +971,7 @@ button {
                 .bof--card__img {
                     width: 100%;
                     margin: 0 28px;
+                    border-radius: 10px;
                 }
 
             }
@@ -973,6 +981,7 @@ button {
         .bof--text {
             font-size: var(--medium-text-dsk);
             margin: 113px 160px 0 160px;
+            max-width: 700px;
         }
 
     }
@@ -980,6 +989,63 @@ button {
     .footer {
         position: inherit;
         z-index: 100;
+    }
+
+    .main--train {
+        padding: 0 clamp(7.0625rem, -0.1683rem + 11.2981vw, 10rem);
+
+        .train {
+
+            .train--title {
+                margin-top: 113px;
+
+                .train--title__txt {
+                    font-size: var(--train-title-dsk);
+                }
+
+                .train--title__num {
+                    font-size: var(--train-numb-dsk);
+                }
+
+            }
+
+            .train--deco {
+                align-items: center; 
+
+                .train--txt {
+                    font-size: var(--medium-text-dsk);
+                }
+                .train--img {
+                    width: 40%;
+                }
+            }
+
+            .train--grid {
+                margin-top: 80px;
+
+                .train--small__txt {
+                    font-size: var(--train-txt-dsk);
+                    grid-row: inherit;
+                    grid-column: inherit;
+                    margin-top: 80px;
+                    align-self: start;
+                }
+
+                .train--small_01, .train--small_03 {
+                    grid-column: 1/3;
+                }
+
+                .train--small_02, .train--small_04 {
+                    grid-column: 3/5;
+                }
+
+                
+            }
+
+        }
+
+        
+
     }
 
 }
