@@ -38,6 +38,11 @@
     --nav-links-dsk : 1.25rem ; 
     --nav-title-dsk : 7.063rem ; 
     --nav-shadow : rgba(155, 10, 10, 0.50); 
+    --h1-title-dsk : 7.063rem ; 
+    --h2-title-dsk : 5rem ; 
+    --medium-text-dsk : 2.5rem ;
+    --small-text-dsk : 1.75rem ; 
+    --special-text-dsk : 3.563rem ;
 }
 
 * {
@@ -336,6 +341,11 @@ button {
     align-items: center;
     justify-content: center;
     border-radius: 20px;
+}
+
+.bof--card__img {
+    width: 100%;
+    margin: 11px 23px;
 }
 
 .bof--cards__title {
@@ -728,10 +738,12 @@ button {
 
     .dashed--line__left {
         left: 160px;
+        z-index: 2;
     }
     
     .dashed--line__right {
         right: 160px;
+        z-index: 2;
     }
 
     .deco {
@@ -743,6 +755,8 @@ button {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        top: 0;
+        z-index: 10;
     }
 
     .deco--title {
@@ -786,6 +800,9 @@ button {
         height: 61px;
         padding: 0;
         border-bottom: 3px solid var(--black);
+        position: sticky;
+        top: 0;
+        z-index: 20;
     }
 
     .menu--title, .menu--burger {
@@ -817,7 +834,153 @@ button {
         justify-content: center;
         width: 262px;
     }
+
+    .header--img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .header--img img {
+        margin-top: 0;
+    }
+      
+    .info, .bof {
+        position: sticky;
+        z-index: 2;
+    }
+
+    .thrill, 
+    .redef, 
+    .launch {
+        width: 100vw;
+        height: 100vh;
+        padding: 0;
+        position: sticky;
+        top: 0;
+        background-color: var(--black);
+        z-index: 1;
+        overflow-y: hidden;
+        display: flex;
+        justify-content: center;
+    }
+
+    .thrill::before, 
+    .redef::before, 
+    .launch::before {
+        top: 113px;
+    }
+
+    .thrill::after, 
+    .redef::after, 
+    .launch::after {
+        bottom: 113px;
+    }
+
+    .thrill--text, 
+    .redef--text, 
+    .launch--text {
+        font-size: var(--medium-text-dsk) ;
+        line-height: 100%;
+        height: inherit;
+    }
+
     
+
+    .thrill--title, .redef--title, .launch--title {
+        font-size: var(--h1-title-dsk);
+    }
+
+    .thrill--title, .launch--title {
+        line-height: 110%;
+    }
+
+    .thrill--title {
+        top: 11.5%;
+        left: 125px;
+    }
+
+    .thrill--text {
+        margin-top: 210px;
+    }
+
+    .redef--title {
+        letter-spacing: 5px ;
+        top: 30px;
+    }
+
+    .redef--text {
+        margin-top: 20%;
+    }
+
+    .launch--title {
+        top: 15.5%;
+        right: 122px;
+    }
+
+    .launch--text {
+        width: 500px;
+        margin-top: 20%;
+    }
+
+    .info {
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .info--deco {
+            align-items: flex-start;
+        }
+
+        .info--text {
+            font-size: var(--small-text-dsk);
+            max-width: 700px;
+        }
+
+    }
+
+    .bof {
+
+        .bof--title {
+            font-size: var(--h2-title-dsk);
+            text-align: center;
+        }
+
+        .bof--cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin: 80px 113px 0 113px;
+
+            .bof--card {
+
+                width: auto;
+
+                .bof--title {
+                    font-size: var(---text-dsk);
+                    padding: 28px;
+                }
+
+                .bof--card__img {
+                    width: 100%;
+                    margin: 0 28px;
+                }
+
+            }
+
+        }
+
+        .bof--text {
+            font-size: var(--medium-text-dsk);
+            margin: 113px 160px 0 160px;
+        }
+
+    }
+
+    .footer {
+        position: inherit;
+        z-index: 100;
+    }
 
 }
 
