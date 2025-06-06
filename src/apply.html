@@ -20,11 +20,124 @@
   <meta property="og:image:height" content="945">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles/app.css">
 
   <script src="scripts/app.js" defer></script>
 </head>
-<body>
+<body class="body--apply">
+
+  <header>
+    <div class="deco">
+      <div class="deco--line"></div>
+      <div class="deco--title">
+        <span class="deco--title__left">ghost</span>
+        <span class="deco--title__main">ghost race</span>
+        <span class="deco--title__right">race</span>
+      </div>
+      <div class="deco-img">
+        <img src="assets/images/f1_logo.svg" alt="Logo Formula 1">
+      </div>
+    </div>
+
+    <nav class="menu menu--apply">
+      <span class="menu--title">ghost race</span>
+      <div class="menu--links menu--links__hidden">
+        <ul class="menu--links__list">
+          <li><a class="menu--links__el" href="index.html">Home</a></li>
+          <li><a class="menu--links__el" href="training.html">Training</a></li>
+        </ul>
+        <a class="menu--links__apply menu--links__active" href="apply.html">Participate</a>
+      </div>
+
+      <div class="menu--line"></div>
+      
+      <button class="menu--burger"><img src="assets/images/burger.svg" alt="burger menu"></button>
+    </nav>
+  </header>
+
+  <main>
+
+    <h1 class="apply--title">Join the Action</h1>
+
+    <section class="form">
+
+      <form action="#" method="post">
+
+        <div class="form--grp">
+          <div class="form--champ ">
+            <label for="prenom">First Name</label>
+            <input class="form--champ__input" placeholder="John" type="text" id="prenom" name="prenom" required>
+          </div>
+  
+          <div class="form--champ">
+            <label for="nom">Last Name</label>
+            <input class="form--champ__input" placeholder="Racer" type="text" id="nom" name="nom" required>
+          </div>
+        </div>
+
+        <div class="form--grp">
+          <div class="form--champ .first--column">
+            <label for="date-naissance">Birth Date</label>
+            <input class="form--champ__input" type="date" id="date-naissance" name="date_naissance" required>  
+          </div>
+  
+          <div class="form--champ">
+            <label for="genre">Gender</label>
+            <select class="form--champ__input input--gender" id="genre" name="genre" required>
+              <option value="">Select</option>
+              <option value="femme">Female</option>
+              <option value="homme">Male</option>
+              <option value="non-binaire">Non-Binary</option>
+              <option value="autre">Other</option>
+              <option value="prefere-pas-dire">Prefer not to say</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="form--grp">
+          <div class="form--champ">
+            <label for="email">Email Adress</label>
+            <input class="form--champ__input" placeholder="johnrace@f1.com" type="email" id="email" name="email" required>
+          </div>
+  
+          <div class="form--champ">
+            <label for="telephone">Phone Number</label>
+            <input class="form--champ__input" type="tel" placeholder="0032 000 00 00 00" id="telephone" name="telephone" required>
+          </div>
+        </div>
+
+        <div class="form--grp">
+          <div class="form--champ">
+            <label for="adresse">Adress</label>
+            <textarea class="form--champ__input" placeholder="Place des Cadets 1, 5000 Namur, Belgium" id="adresse" name="adresse" rows="3" required></textarea>
+          </div>
+        </div>
+
+        
+
+
+        <button class="form--btn" type="submit">Register</button>
+
+      </form>
+
+    </section> 
+
+    <div class="form--submit form--submit__hidden">
+      <h2>Your registration has been received !</h2><br>
+      <p>You’re now on the pre-grid list — final selection is still ahead. We’ll contact you soon to confirm your spot on the starting line!</p>
+      <a href="index.html">Back to Home</a>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <span>© 2025 — <a class="footer--link" href="aurelienfeye.be">Aurélien Feye</a></span>
+  </footer>
+
 
 </body>
 </html>
